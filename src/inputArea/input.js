@@ -6,7 +6,7 @@ export default function myInput(parent) {
 		const input = {
 			init: function () {
 				this.makeInputWrapper();
-				this.rendertest();
+				this.addEventListenerToForm();
 			},
 			makeInputWrapper: function () {
 				this.inwrap = document.createElement('div');
@@ -62,7 +62,7 @@ export default function myInput(parent) {
 				this.sliderLabel.appendChild(this.sliderSpan);
 				this.completed.appendChild(this.sliderLabel);
 			},
-			rendertest: function () {
+			addEventListenerToForm: function () {
 				addbookbtn(this.table);
 			},
 		};
