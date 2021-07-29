@@ -1,0 +1,12 @@
+.addbookbtnwrap {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	margin-top: 1%;
+}
+
+.makeAddBookBtn {
+	font-size: 1.3rem;
+	width: 90%;
+}
