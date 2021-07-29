@@ -32,7 +32,7 @@
 	position: relative;
 	display: inline-block;
 	width: 50px;
-	height: 27px;
+	height: 26px;
 }
 
 .switch input {
@@ -59,7 +59,7 @@
 	height: 22px;
 	width: 22px;
 	left: 4px;
-	bottom: 3px;
+	bottom: 2px;
 	background-color: white;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
