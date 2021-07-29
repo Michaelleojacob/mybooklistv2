@@ -1,4 +1,6 @@
 import './addbookbtn.css';
+import './../bookClass/bookClass';
+import Book from './../bookClass/bookClass';
 
 export default function myaddbookbtn(parent) {
 	(function () {
@@ -21,7 +23,17 @@ export default function myaddbookbtn(parent) {
 			},
 			submitLogic: function (event) {
 				event.preventDefault();
-				console.log(event);
+				this.title = document.querySelector('.title').value;
+				this.author = document.querySelector('.author').value;
+				this.pages = document.querySelector('.pages').value;
+				this.completed = document.querySelector('.completed').checked;
+				const book = new Book(
+					this.title,
+					this.author,
+					this.pages,
+					this.completed
+				);
+				console.log(book);
 			},
 			addSubmitEventToParent: function () {
 				parent.addEventListener('submit', this.submitLogic);

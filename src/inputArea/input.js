@@ -16,9 +16,9 @@ export default function myInput(parent) {
 			},
 			renderTable: function () {
 				this.makeTable();
-				this.makeTableRow('firstrow', 'Title:', 'firstrInput');
-				this.makeTableRow('secondrow', 'Author:', 'secondrInput');
-				this.makeTableRow('thirdrow', 'Pages:', 'thirdrInput');
+				this.makeTableRow('firstrow', 'Title:', 'title');
+				this.makeTableRow('secondrow', 'Author:', 'author');
+				this.makeTableRow('thirdrow', 'Pages:', 'pages');
 				this.makeCompletedRow();
 			},
 			makeTable: function () {
@@ -42,7 +42,6 @@ export default function myInput(parent) {
 			makeTableInput: function (inputName) {
 				this.inputName = document.createElement('input');
 				this.inputName.classList.add('rowinput', inputName);
-				this.inputName.classList.add('input');
 				this.tablerow.appendChild(this.inputName);
 			},
 			makeCompletedRow: function () {
@@ -55,6 +54,7 @@ export default function myInput(parent) {
 				this.sliderLabel = document.createElement('label');
 				this.sliderLabel.classList.add('switch');
 				this.sliderInput = document.createElement('input');
+				this.sliderInput.classList.add('completed');
 				this.sliderInput.setAttribute('type', 'checkbox');
 				this.sliderSpan = document.createElement('span');
 				this.sliderSpan.classList.add('slider', 'round');
