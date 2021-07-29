@@ -9,7 +9,7 @@ import addbookbtn from './addbookbtn/addbookbtn';
 			this.cacheDom();
 			this.renderHeader();
 			this.renderInput();
-			this.rednerAddbookbtn();
+			// this.rednerAddbookbtn();
 		},
 		cacheDom: function () {
 			this.parent = document.querySelector('#main');
@@ -20,9 +20,9 @@ import addbookbtn from './addbookbtn/addbookbtn';
 		renderInput: function () {
 			input(app.parent);
 		},
-		rednerAddbookbtn: function () {
-			addbookbtn(app.parent);
-		},
+		// rednerAddbookbtn: function () {
+		// 	addbookbtn(app.parent);
+		// },
 	};
 	app.init();
 })();

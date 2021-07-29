@@ -5,6 +5,7 @@ export default function myaddbookbtn(parent) {
 		const addbookbtn = {
 			init: function () {
 				this.makeBtnWrap();
+				this.addSubmitEventToParent();
 			},
 			makeBtnWrap: function () {
 				this.addbookbtnwrap = document.createElement('div');
@@ -18,7 +19,13 @@ export default function myaddbookbtn(parent) {
 				this.makeAddBookBtn.textContent = 'add book';
 				this.addbookbtnwrap.appendChild(this.makeAddBookBtn);
 			},
-			// init:function(){},
+			submitLogic: function (event) {
+				event.preventDefault();
+				console.log(event);
+			},
+			addSubmitEventToParent: function () {
+				parent.addEventListener('submit', this.submitLogic);
+			},
 		};
 		addbookbtn.init();
 	})();

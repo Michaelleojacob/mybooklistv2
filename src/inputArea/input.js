@@ -1,10 +1,12 @@
 import './input.css';
+import addbookbtn from './../addbookbtn/addbookbtn';
 
 export default function myInput(parent) {
 	(function () {
 		const input = {
 			init: function () {
 				this.makeInputWrapper();
+				this.rendertest();
 			},
 			makeInputWrapper: function () {
 				this.inwrap = document.createElement('div');
@@ -20,7 +22,7 @@ export default function myInput(parent) {
 				this.makeCompletedRow();
 			},
 			makeTable: function () {
-				this.table = document.createElement('table');
+				this.table = document.createElement('form');
 				this.table.classList.add('table');
 				this.table.setAttribute('style', 'width:100%');
 				this.inwrap.appendChild(this.table);
@@ -59,6 +61,9 @@ export default function myInput(parent) {
 				this.sliderLabel.appendChild(this.sliderInput);
 				this.sliderLabel.appendChild(this.sliderSpan);
 				this.completed.appendChild(this.sliderLabel);
+			},
+			rendertest: function () {
+				addbookbtn(this.table);
 			},
 		};
 		input.init();
