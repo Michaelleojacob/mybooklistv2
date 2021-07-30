@@ -2,6 +2,7 @@ import './addbookbtn.css';
 import './../bookClass/bookClass';
 import Book from './../bookClass/bookClass';
 
+//!try to make submit event logic in its own module.
 export default function myaddbookbtn(parent) {
 	(function () {
 		const addbookbtn = {

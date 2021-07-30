@@ -15,12 +15,12 @@
 }
 
 @media only screen and (min-width: 450px) {
-	.input {
+	.rowinput {
 		width: 98.5%;
 	}
 }
 @media only screen and (min-width: 650px) {
-	.input {
+	.rowinput {
 		width: 99%;
 	}
 }
