@@ -1,0 +1,12 @@
+.uiwrap {
+	display: flex;
+	width: 100%;
+	margin-top: 2%;
+}
+
+.uitableRow {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	font-size: 1.3rem;
+}
