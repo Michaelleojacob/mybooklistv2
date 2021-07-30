@@ -1,7 +1,7 @@
 import './index.css';
 import header from './header/header';
 import input from './inputArea/input';
-import addbookbtn from './addbookbtn/addbookbtn';
+import handleEventLogic from './addBookEventLogic/eventLogic';
 
 (function myApp() {
 	const app = {
@@ -9,7 +9,7 @@ import addbookbtn from './addbookbtn/addbookbtn';
 			this.cacheDom();
 			this.renderHeader();
 			this.renderInput();
-			// this.rednerAddbookbtn();
+			this.addSubmitEventToForm();
 		},
 		cacheDom: function () {
 			this.parent = document.querySelector('#main');
@@ -20,9 +20,9 @@ import addbookbtn from './addbookbtn/addbookbtn';
 		renderInput: function () {
 			input(app.parent);
 		},
-		// rednerAddbookbtn: function () {
-		// 	addbookbtn(app.parent);
-		// },
+		addSubmitEventToForm: function () {
+			handleEventLogic();
+		},
 	};
 	app.init();
 })();
