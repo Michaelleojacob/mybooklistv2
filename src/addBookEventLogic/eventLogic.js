@@ -22,7 +22,7 @@ export default function handleEventLogic() {
 					this.pages,
 					this.completed
 				);
-				console.log(book);
+				return book;
 			},
 			addEventListener: function () {
 				this.form.addEventListener('submit', this.submitLogic);
