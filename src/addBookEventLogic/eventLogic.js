@@ -1,4 +1,5 @@
 import Book from '../bookClass/bookClass';
+import dynamicUI from '../uiclass/dynamicui/dynamicui';
 
 export default function handleEventLogic() {
 	(function () {
@@ -9,6 +10,12 @@ export default function handleEventLogic() {
 			},
 			cacheDom: function () {
 				this.form = document.querySelector('.table');
+			},
+			clearInputFields: function () {
+				this.title = document.querySelector('.title').value = '';
+				this.author = document.querySelector('.author').value = '';
+				this.pages = document.querySelector('.pages').value = '';
+				this.completed = document.querySelector('.completed').checked = false;
 			},
 			submitLogic: function (event) {
 				event.preventDefault();
@@ -22,6 +29,8 @@ export default function handleEventLogic() {
 					this.pages,
 					this.completed
 				);
+				dynamicUI.init(book);
+				addBookEventLogic.clearInputFields();
 				return book;
 			},
 			addEventListener: function () {
