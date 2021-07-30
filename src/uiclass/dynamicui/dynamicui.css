@@ -1,0 +1,10 @@
+.mydiv {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 1.3rem;
+	width: 96%;
+	margin: 2%;
+	background: rgba(0, 0, 255, 0.267);
+}

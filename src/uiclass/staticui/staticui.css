@@ -2,6 +2,8 @@
 	display: flex;
 	width: 100%;
 	margin-top: 2%;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .uitableRow {
@@ -9,4 +11,6 @@
 	width: 100%;
 	justify-content: space-around;
 	font-size: 1.3rem;
+	padding: 5px;
+	border-bottom: 1px solid black;
 }
