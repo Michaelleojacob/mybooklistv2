@@ -4,12 +4,14 @@ import myInput from './inputArea/input';
 import handleEventLogic from './addBookEventLogic/eventLogic';
 import UI from './uiclass/uiclass';
 import myDocListeners from './documentlisteners/doclisteners';
+import myAlert from './alertclass/alertclass';
 
 (function myApp() {
 	const app = {
 		init: function () {
 			this.cacheDom();
 			this.renderHeader();
+			this.renderAlerts();
 			this.renderInput();
 			this.addSubmitEventToForm();
 			this.renderUI();
@@ -20,6 +22,9 @@ import myDocListeners from './documentlisteners/doclisteners';
 		},
 		renderHeader: function () {
 			myheader(app.parent);
+		},
+		renderAlerts: function () {
+			myAlert.init(app.parent);
 		},
 		renderInput: function () {
 			myInput(app.parent);

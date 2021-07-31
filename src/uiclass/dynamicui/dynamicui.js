@@ -23,9 +23,9 @@ export default class dynamicUI {
 	static renderPieces() {
 		this.makeUIDivWrap();
 		this.makeDynamicParentDiv();
-		this.makeChildElement(this.title);
-		this.makeChildElement(this.author);
-		this.makeChildElement(this.pages);
+		this.makeChildElement('title', this.title);
+		this.makeChildElement('author', this.author);
+		this.makeChildElement('pages', this.pages);
 		this.makeCompletedSlider(this.completed);
 		this.makeDeleteBtn();
 		this.giveThisDomElementItsID(this.bookid);
@@ -40,10 +40,10 @@ export default class dynamicUI {
 		this.dynParentDiv.classList.add('dynParentDiv');
 		this.dynamicUIDivWrap.appendChild(this.dynParentDiv);
 	}
-	static makeChildElement(elementName) {
+	static makeChildElement(elementName, userInput) {
 		this.elementName = document.createElement('div');
 		this.elementName.classList.add(elementName);
-		this.elementName.textContent = elementName;
+		this.elementName.textContent = userInput;
 		this.dynParentDiv.appendChild(this.elementName);
 	}
 	static makeCompletedSlider(booleanValue) {

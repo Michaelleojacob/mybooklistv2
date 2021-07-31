@@ -1,3 +1,5 @@
+import myAlert from './../alertclass/alertclass';
+
 export default class Validation {
 	static cacheValues() {
 		this.title = document.querySelector('.title');
@@ -7,7 +9,7 @@ export default class Validation {
 	}
 	static checkTitle() {
 		if (this.title.value === '') {
-			console.log('title is not filled out');
+			myAlert.alertTextContent('title is empty', 'red');
 			return false;
 		} else {
 			return true;
@@ -15,7 +17,7 @@ export default class Validation {
 	}
 	static checkAuthor() {
 		if (this.author.value === '') {
-			console.log('author is not filled out');
+			myAlert.alertTextContent('author is empty', 'red');
 			return false;
 		} else {
 			return true;
@@ -23,11 +25,11 @@ export default class Validation {
 	}
 	static checkPages() {
 		if (this.pages.value === '') {
-			console.log('pages is not filled out');
+			myAlert.alertTextContent('pages is empty', 'red');
 			return false;
 		}
 		if (isNaN(this.pages.value) === true) {
-			console.log('pages is not a number');
+			myAlert.alertTextContent('pages is not a number', 'red');
 			return false;
 		} else {
 			return true;

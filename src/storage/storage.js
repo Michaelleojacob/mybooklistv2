@@ -16,7 +16,7 @@ export default class Storage {
 	static removeBook(id) {
 		const books = Storage.getBooks();
 		books.forEach((book, index) => {
-			if (book.id === id) {
+			if (book.bookid === id) {
 				books.splice(index, 1);
 			}
 		});

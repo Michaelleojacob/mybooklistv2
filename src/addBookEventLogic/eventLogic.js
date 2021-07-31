@@ -2,6 +2,7 @@ import Book from '../bookClass/bookClass';
 import dynamicUI from '../uiclass/dynamicui/dynamicui';
 import Validation from '../cacheValuesAndValidate/validation';
 import Storage from '../storage/storage';
+import myAlert from '../alertclass/alertclass';
 
 export default function handleEventLogic() {
 	(function () {
@@ -28,6 +29,7 @@ export default function handleEventLogic() {
 						this.pages,
 						this.completed
 					);
+					myAlert.alertTextContent('book successfully added', 'green');
 					dynamicUI.init(book);
 					Storage.addBook(book);
 					addBookEventLogic.clearInputFields();

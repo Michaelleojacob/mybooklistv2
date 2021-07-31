@@ -1,5 +1,6 @@
 import dynamicUI from '../uiclass/dynamicui/dynamicui';
 import Storage from '../storage/storage';
+import myAlert from '../alertclass/alertclass';
 
 export default function myDocListeners() {
 	const listener = {
@@ -15,6 +16,7 @@ export default function myDocListeners() {
 			if (event.target.className.includes('deletebtn')) {
 				const getid = event.target.parentNode.childNodes[5].className;
 				event.target.parentNode.parentNode.remove();
+				myAlert.alertTextContent('book removed successfully', '#f48c06');
 				Storage.removeBook(getid);
 			}
 		},
@@ -26,6 +28,7 @@ export default function myDocListeners() {
 				const targetIsTrueOrFalse = event.target.checked;
 				const getid =
 					event.target.parentNode.parentNode.childNodes[5].className;
+				myAlert.alertTextContent('Completed status changed', '#0077b6');
 				Storage.changeCompletedStatus(getid, targetIsTrueOrFalse);
 			}
 		},

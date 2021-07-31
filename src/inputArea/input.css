@@ -7,8 +7,10 @@
 	display: flex;
 	margin: 1%;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-content: flex-start;
+	align-items: stretch;
+	padding: 0;
 }
 .rowinput {
 	width: 97%;
