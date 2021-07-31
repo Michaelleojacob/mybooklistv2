@@ -14,7 +14,7 @@ export default class Storage {
 		localStorage.setItem('books', JSON.stringify(books));
 	}
 	static removeBook(title) {
-		const books = Store.getBooks();
+		const books = Storage.getBooks();
 		books.forEach((book, index) => {
 			if (book.title === title) {
 				books.splice(index, 1);
