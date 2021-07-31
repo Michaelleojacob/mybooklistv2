@@ -18,6 +18,7 @@ export default class dynamicUI {
 		this.author = obj.author;
 		this.pages = obj.pages;
 		this.completed = obj.completed;
+		this.bookid = obj.bookid;
 	}
 	static renderPieces() {
 		this.makeUIDivWrap();
@@ -27,6 +28,7 @@ export default class dynamicUI {
 		this.makeChildElement(this.pages);
 		this.makeCompletedSlider(this.completed);
 		this.makeDeleteBtn();
+		this.giveThisDomElementItsID(this.bookid);
 	}
 	static makeUIDivWrap() {
 		this.dynamicUIDivWrap = document.createElement('div');
@@ -40,7 +42,7 @@ export default class dynamicUI {
 	}
 	static makeChildElement(elementName) {
 		this.elementName = document.createElement('div');
-		this.elementName.classList.add(elementName, 'objproperty');
+		this.elementName.classList.add(elementName);
 		this.elementName.textContent = elementName;
 		this.dynParentDiv.appendChild(this.elementName);
 	}
@@ -66,5 +68,10 @@ export default class dynamicUI {
 		this.deleteBtn.classList.add('deletebtn');
 		this.deleteBtn.textContent = 'X';
 		this.dynParentDiv.appendChild(this.deleteBtn);
+	}
+	static giveThisDomElementItsID(elementId) {
+		this.domElid = document.createElement('div');
+		this.domElid.classList.add(elementId);
+		this.dynParentDiv.appendChild(this.domElid);
 	}
 }

@@ -13,9 +13,9 @@ export default function myDocListeners() {
 		},
 		handleDelete: function (event) {
 			if (event.target.className.includes('deletebtn')) {
-				const getTitle = event.target.parentNode.childNodes[0].textContent;
+				const getid = event.target.parentNode.childNodes[5].className;
 				event.target.parentNode.parentNode.remove();
-				Storage.removeBook(getTitle);
+				Storage.removeBook(getid);
 			}
 		},
 		listenForClickDelete: function () {
@@ -24,12 +24,9 @@ export default function myDocListeners() {
 		handleCompletedChange: function (event) {
 			if (event.target.className.includes('dyncompleted')) {
 				const targetIsTrueOrFalse = event.target.checked;
-				const gettingTitleForCompletedChange =
-					event.target.parentNode.parentNode.childNodes[0].textContent;
-				Storage.changeCompletedStatus(
-					gettingTitleForCompletedChange,
-					targetIsTrueOrFalse
-				);
+				const getid =
+					event.target.parentNode.parentNode.childNodes[5].className;
+				Storage.changeCompletedStatus(getid, targetIsTrueOrFalse);
 			}
 		},
 		listenForCompletedChange: function () {

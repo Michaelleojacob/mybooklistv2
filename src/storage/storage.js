@@ -13,19 +13,19 @@ export default class Storage {
 		books.push(book);
 		localStorage.setItem('books', JSON.stringify(books));
 	}
-	static removeBook(title) {
+	static removeBook(id) {
 		const books = Storage.getBooks();
 		books.forEach((book, index) => {
-			if (book.title === title) {
+			if (book.id === id) {
 				books.splice(index, 1);
 			}
 		});
 		localStorage.setItem('books', JSON.stringify(books));
 	}
-	static changeCompletedStatus(title, trueOrFalseValue) {
+	static changeCompletedStatus(id, trueOrFalseValue) {
 		const books = Storage.getBooks();
 		books.forEach(book => {
-			if (book.title === title) {
+			if (book.bookid === id) {
 				book.completed = trueOrFalseValue;
 			}
 		});

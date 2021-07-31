@@ -23,6 +23,10 @@
 	font-size: inherit;
 }
 
+.bookid {
+	display: none;
+}
+
 .dynswitch {
 	margin-left: 5%;
 	position: relative;
