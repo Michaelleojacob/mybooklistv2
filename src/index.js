@@ -5,6 +5,7 @@ import handleEventLogic from './addBookEventLogic/eventLogic';
 import UI from './uiclass/uiclass';
 import myDocListeners from './documentlisteners/doclisteners';
 import myAlert from './alertclass/alertclass';
+import myfooter from './flair/flair';
 
 (function myApp() {
 	const app = {
@@ -13,8 +14,9 @@ import myAlert from './alertclass/alertclass';
 			this.renderHeader();
 			this.renderAlerts();
 			this.renderInput();
-			this.addSubmitEventToForm();
 			this.renderUI();
+			this.renderMyFooter();
+			this.addSubmitEventToForm();
 			this.addDocListeners();
 		},
 		cacheDom: function () {
@@ -39,6 +41,9 @@ import myAlert from './alertclass/alertclass';
 			document.addEventListener('DOMContentLoaded', () => {
 				myDocListeners();
 			});
+		},
+		renderMyFooter: function () {
+			myfooter(app.parent);
 		},
 	};
 	app.init();

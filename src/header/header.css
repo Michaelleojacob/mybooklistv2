@@ -3,11 +3,15 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-top: 5%;
+	margin-top: 3%;
 	font-size: 30px;
 	font-family: 'Times New Roman', Times, serif;
 }
 
+.bookicon {
+	color: #1e5f91af;
+}
+
 #Book {
-	color: rgb(0, 0, 255);
+	color: #1e6091;
 }

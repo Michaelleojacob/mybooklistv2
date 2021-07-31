@@ -1,0 +1,49 @@
+.fwrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color: #463f3ad5;
+	font-size: 22px;
+	margin-top: 10%;
+}
+
+.email {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1vh;
+	color: #463f3ad5;
+}
+
+.socials {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	flex-direction: row;
+	align-content: center;
+	align-items: baseline;
+	font-size: 22px;
+}
+
+a {
+	text-decoration: none;
+	color: #463f3ad5;
+}
+
+a:hover {
+	color: black;
+}
+
+.githubatag {
+	margin: 0px 3px 0px 3px;
+}
+
+.linkedinatag {
+	margin: 0px 3px 0px 3px;
+}
+
+.repoatag {
+	margin: 0px 3px 0px 3px;
+}

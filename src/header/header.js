@@ -1,4 +1,8 @@
 import './header.css';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 export default function myheader(parent) {
 	(function () {
@@ -13,15 +17,22 @@ export default function myheader(parent) {
 				this.renderSpans();
 			},
 			renderSpans: function () {
-				this.makeSpans('my');
+				this.makeIcon();
+				this.makeSpans('My');
 				this.makeSpans('Book');
-				this.makeSpans('list');
+				this.makeSpans('List');
 			},
 			makeSpans: function (name) {
 				this.name = document.createElement('span');
 				this.name.textContent = name;
 				this.name.setAttribute('id', name);
 				this.hdwrap.appendChild(this.name);
+			},
+			makeIcon: function () {
+				this.bookicon = document.createElement('div');
+				this.bookicon.classList.add('bookicon');
+				this.bookicon.innerHTML = `<i class="fas fa-book"></i>`;
+				this.hdwrap.appendChild(this.bookicon);
 			},
 		};
 		header.init();
