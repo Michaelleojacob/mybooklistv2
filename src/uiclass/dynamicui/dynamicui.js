@@ -1,12 +1,5 @@
 import './dynamicui.css';
 
-const myobj = {
-	title: 'bookone',
-	author: 'me',
-	pages: 12,
-	completed: true,
-};
-
 export default class dynamicUI {
 	static init(obj) {
 		this.cacheDom(obj);
@@ -69,7 +62,3 @@ export default class dynamicUI {
 		this.dynParentDiv.appendChild(this.deleteBtn);
 	}
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-	dynamicUI.init(myobj);
-});
