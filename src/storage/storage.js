@@ -22,4 +22,13 @@ export default class Storage {
 		});
 		localStorage.setItem('books', JSON.stringify(books));
 	}
+	static changeCompletedStatus(title, trueOrFalseValue) {
+		const books = Storage.getBooks();
+		books.forEach(book => {
+			if (book.title === title) {
+				book.completed = trueOrFalseValue;
+			}
+		});
+		localStorage.setItem('books', JSON.stringify(books));
+	}
 }
