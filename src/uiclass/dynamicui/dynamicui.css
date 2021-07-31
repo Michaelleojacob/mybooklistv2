@@ -12,4 +12,74 @@
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-around;
+	font-size: 1.3rem;
+}
+
+.deletebtn {
+	padding: 0;
+	border: none;
+	background: inherit;
+	color: red;
+	font-size: inherit;
+}
+
+.dynswitch {
+	margin-left: 5%;
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+}
+
+.dynswitch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.dynslider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.dynslider:before {
+	position: absolute;
+	content: '';
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .dynslider {
+	background-color: #2196f3;
+}
+
+input:focus + .dynslider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .dynslider:before {
+	-webkit-transform: translateX(12px);
+	-ms-transform: translateX(12px);
+	transform: translateX(12px);
+}
+
+/* Rounded dynsliders */
+.dynslider.dynround {
+	border-radius: 34px;
+}
+
+.dynslider.dynround:before {
+	border-radius: 50%;
 }

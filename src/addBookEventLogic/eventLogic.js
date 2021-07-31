@@ -13,11 +13,11 @@ export default function handleEventLogic() {
 				this.form = document.querySelector('.table');
 			},
 			submitLogic: function (event) {
-				event.preventDefault();
 				this.title = document.querySelector('.title').value;
 				this.author = document.querySelector('.author').value;
 				this.pages = document.querySelector('.pages').value;
 				this.completed = document.querySelector('.completed').checked;
+				event.preventDefault();
 				if (Validation.runAllChecks() === false) {
 					return;
 				} else {
