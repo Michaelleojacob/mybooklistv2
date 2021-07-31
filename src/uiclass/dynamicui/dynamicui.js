@@ -40,7 +40,7 @@ export default class dynamicUI {
 	}
 	static makeChildElement(elementName) {
 		this.elementName = document.createElement('div');
-		this.elementName.classList.add(elementName, 'objproperty');
+		this.elementName.classList.add('objproperty');
 		this.elementName.textContent = elementName;
 		this.dynParentDiv.appendChild(this.elementName);
 	}

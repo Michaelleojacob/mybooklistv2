@@ -8,7 +8,6 @@
 .dynParentDiv {
 	margin-top: 2%;
 	display: flex;
-	/* border: 1px solid blue; */
 	flex: 1;
 	flex-wrap: wrap;
 	flex-direction: row;
