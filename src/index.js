@@ -1,8 +1,9 @@
 import './index.css';
-import header from './header/header';
-import input from './inputArea/input';
+import myheader from './header/header';
+import myInput from './inputArea/input';
 import handleEventLogic from './addBookEventLogic/eventLogic';
 import UI from './uiclass/uiclass';
+import myDocListeners from './documentlisteners/doclisteners';
 
 (function myApp() {
 	const app = {
@@ -12,21 +13,27 @@ import UI from './uiclass/uiclass';
 			this.renderInput();
 			this.addSubmitEventToForm();
 			this.renderUI();
+			this.addDocListeners();
 		},
 		cacheDom: function () {
 			this.parent = document.querySelector('#main');
 		},
 		renderHeader: function () {
-			header(app.parent);
+			myheader(app.parent);
 		},
 		renderInput: function () {
-			input(app.parent);
+			myInput(app.parent);
 		},
 		addSubmitEventToForm: function () {
 			handleEventLogic();
 		},
 		renderUI: function () {
 			UI.init(app.parent);
+		},
+		addDocListeners: function () {
+			document.addEventListener('DOMContentLoaded', () => {
+				myDocListeners();
+			});
 		},
 	};
 	app.init();

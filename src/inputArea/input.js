@@ -42,6 +42,7 @@ export default function myInput(parent) {
 			makeTableInput: function (inputName) {
 				this.inputName = document.createElement('input');
 				this.inputName.classList.add('rowinput', inputName);
+				this.inputName.setAttribute('autocomplete', 'off');
 				this.tablerow.appendChild(this.inputName);
 			},
 			makeCompletedRow: function () {

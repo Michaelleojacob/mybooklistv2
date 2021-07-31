@@ -1,6 +1,7 @@
 import Book from '../bookClass/bookClass';
 import dynamicUI from '../uiclass/dynamicui/dynamicui';
 import Validation from '../cacheValuesAndValidate/validation';
+import Storage from '../storage/storage';
 
 export default function handleEventLogic() {
 	(function () {
@@ -28,6 +29,7 @@ export default function handleEventLogic() {
 						this.completed
 					);
 					dynamicUI.init(book);
+					Storage.addBook(book);
 					addBookEventLogic.clearInputFields();
 					return book;
 				}

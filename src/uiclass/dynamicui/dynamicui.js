@@ -1,6 +1,13 @@
 import './dynamicui.css';
+import Storage from '../../storage/storage';
 
 export default class dynamicUI {
+	static displayBooks() {
+		const books = Storage.getBooks();
+		books.forEach(book => {
+			dynamicUI.init(book);
+		});
+	}
 	static init(obj) {
 		this.cacheDom(obj);
 		this.renderPieces();
@@ -18,7 +25,6 @@ export default class dynamicUI {
 		this.makeChildElement(this.title);
 		this.makeChildElement(this.author);
 		this.makeChildElement(this.pages);
-		// this.makeChildElement(this.completed);
 		this.makeCompletedSlider(this.completed);
 		this.makeDeleteBtn();
 	}
