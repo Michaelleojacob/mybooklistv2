@@ -1,10 +1,4 @@
 export default class Validation {
-	static init() {
-		this.cacheValues();
-		this.checkTitle();
-		this.checkAuthor();
-		this.checkPages();
-	}
 	static cacheValues() {
 		this.title = document.querySelector('.title');
 		this.author = document.querySelector('.author');
@@ -40,7 +34,7 @@ export default class Validation {
 		}
 	}
 	static runAllChecks() {
-		this.init();
+		this.cacheValues();
 		if (
 			this.checkTitle() === true &&
 			this.checkAuthor() === true &&

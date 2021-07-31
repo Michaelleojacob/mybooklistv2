@@ -18,7 +18,6 @@ export default function handleEventLogic() {
 				this.author = document.querySelector('.author').value;
 				this.pages = document.querySelector('.pages').value;
 				this.completed = document.querySelector('.completed').checked;
-				console.log(Validation.runAllChecks());
 				if (Validation.runAllChecks() === false) {
 					return;
 				} else {
