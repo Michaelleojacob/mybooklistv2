@@ -71,7 +71,7 @@ export default class dynamicUI {
 	}
 	static giveThisDomElementItsID(elementId) {
 		this.domElid = document.createElement('div');
-		this.domElid.classList.add(elementId);
+		this.domElid.classList.add('bookid', elementId);
 		this.dynParentDiv.appendChild(this.domElid);
 	}
 }

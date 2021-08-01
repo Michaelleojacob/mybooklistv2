@@ -1,8 +1,12 @@
 .dynamicUIDivWrap {
 	display: flex;
-	width: 100%;
-	justify-content: center;
-	align-content: center;
+	width: 90%;
+}
+
+@media only screen and (min-width: 550px) {
+	.dynamicUIDivWrap {
+		width: 50%;
+	}
 }
 
 .dynParentDiv {
@@ -11,7 +15,7 @@
 	flex: 1;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	font-size: 1.3rem;
 }
 
@@ -19,7 +23,7 @@
 	padding: 0;
 	border: none;
 	background: inherit;
-	color: red;
+	color: rgba(255, 0, 0, 0.897);
 	font-size: inherit;
 }
 

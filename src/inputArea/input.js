@@ -24,11 +24,11 @@ export default function myInput(parent) {
 			makeTable: function () {
 				this.table = document.createElement('form');
 				this.table.classList.add('table');
-				this.table.setAttribute('style', 'width:100%');
 				this.inwrap.appendChild(this.table);
 			},
 			makeTableRow: function (tableDataName, text, inputName) {
 				this.tablerow = document.createElement('tr');
+				this.tablerow.classList.add('mytr');
 				this.makeTableDataCell(tableDataName, text);
 				this.makeTableInput(inputName);
 				this.table.appendChild(this.tablerow);
