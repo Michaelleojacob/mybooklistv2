@@ -8,11 +8,11 @@
 
 .makeAddBookBtn {
 	font-size: 1.3rem;
-	width: 90%;
+	width: 99%;
 	color: white;
 	border: none;
 	box-sizing: border-box;
-	background: #1c6f80;
+	background: #28a5be;
 }
 
 .makeAddBookBtn:focus {
